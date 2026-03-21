@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>KILLER VIP 3.0 🔥 GLITCH EDITION | BGMI CHEATS</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- QR Code Generator -->
+    <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <style>
+        * {
+            font-family: 'Rajdhani', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        h1, h2, h3, .gaming-font {
+            font-family: 'Orbitron', sans-serif;
+        }
+        body {
+            background: #0a0c12;
+            overflow-x: hidden;
+            color: #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        body.light-mode {
+            background: #e8ecf2;
+            color: #1a1f2e;
+        }
+        body.light-mode .price-card,
+        body.light-mode .key-details-card,
+        body.light-mode .payment-qr-container,
+        body.light-mode .bg-black\/40 {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-color: rgba(255, 0, 102, 0.3);
+        }
+        
+        /* GLITCH EFFECT */
+        .glitch-wrapper { position: relative; display: inline-block; }
+        .glitch-text {
+            font-size: 6rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            position: relative;
+            text-shadow: 0.05em 0 0 rgba(255, 0, 102, 0.75), -0.05em -0.025em 0 rgba(0, 255, 204, 0.75);
+            animation: glitch-shake 0.3s infinite;
+            letter-spacing: 0.1em;
+        }
+        @keyframes glitch-shake {
+            0% { transform: translate(0); }
+            20% { transform: translate(-2px, 1px); }
+            40% { transform: translate(-1px, -1px); }
+            60% { transform: translate(1px, 1px); }
+            80% { transform: translate(2px, -1px); }
+            100% { transform: translate(0); }
+        }
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #0a0c12;
+        }
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -2px 0 #ff0066;
+            clip: rect(24px, 550px, 90px, 0);
+            animation: glitch-anim-1 2s infinite linear alternate-reverse;
+        }
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: -2px 0 #00ffcc;
+            clip: rect(85px, 550px, 140px, 0);
+            animation: glitch-anim-2 2.5s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim-1 {
+            0% { clip: rect(32px, 9999px, 44px, 0); transform: skew(0.2deg); }
+            50% { clip: rect(85px, 9999px, 140px, 0); transform: skew(0.8deg); }
+            100% { clip: rect(12px, 9999px, 70px, 0); transform: skew(0.2deg); }
+        }
+        @keyframes glitch-anim-2 {
+            0% { clip: rect(65px, 9999px, 110px, 0); transform: skew(0.4deg); }
+            50% { clip: rect(22px, 9999px, 88px, 0); transform: skew(0.9deg); }
+            100% { clip: rect(98px, 9999px, 132px, 0); transform: skew(0.3deg); }
+        }
+        
+        @media (max-width: 768px) {
+            .glitch-text { font-size: 3rem; }
+        }
+        
+        .hero-glow {
+            text-shadow: 0 0 15px #ff0066, 0 0 30px #00ffcc;
+            animation: glowPulse 1.8s ease-in-out infinite;
+        }
+        @keyframes glowPulse {
+            0%, 100% { text-shadow: 0 0 10px #ff0066, 0 0 20px #00ffcc; }
+            50% { text-shadow: 0 0 25px #ff0066, 0 0 45px #00ffcc; }
+        }
+        
+        /* MODAL STYLES */
+        .download-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(15px);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: linear-gradient(135deg, #111827, #1f2937);
+            border: 2px solid #00ffcc;
+            border-radius: 40px;
+            padding: 2rem;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 0 70px rgba(0, 255, 204, 0.4);
+            animation: modalPop 0.4s cubic-bezier(0.34, 1.2, 0.64, 1);
+            max-height: 85vh;
+            overflow-y: auto;
+        }
+        @keyframes modalPop {
+            from { transform: scale(0.8); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .loader-spinner {
+            width: 60px;
+            height: 60px;
+            border: 5px solid rgba(0, 255, 204, 0.2);
+            border-top: 5px solid #ff0066;
+            border-right: 5px solid #00ffcc;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 15px auto;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .modal-plan-btn {
+            background: rgba(0, 255, 204, 0.15);
+            border: 1px solid #00ffcc;
+            padding: 12px;
+            border-radius: 60px;
+            margin: 8px 0;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .modal-plan-btn:hover {
+            background: rgba(0, 255, 204, 0.35);
+            transform: translateX(5px);
+            border-color: #ff0066;
+        }
+        .modal-plan-btn.selected-plan-modal {
+            background: linear-gradient(95deg, #ff0066, #00ffcc);
+            border-color: #fff;
+            color: black;
+            font-weight: bold;
+        }
+        .download-btn-modal {
+            background: linear-gradient(95deg, #ff0066, #00ffcc);
+            border: none;
+            padding: 14px 28px;
+            border-radius: 60px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            width: 100%;
+            transition: all 0.3s;
+            margin-top: 20px;
+            cursor: pointer;
+            color: black;
+        }
+        .download-btn-modal:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        .download-btn-modal:not(:disabled):hover {
+            transform: scale(1.02);
+            box-shadow: 0 0 25px #ff0066;
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+            transition: 0.2s;
+            z-index: 10001;
+        }
+        .close-modal:hover {
+            color: #ff0066;
+            transform: rotate(90deg);
+        }
+        
+        /* Animations */
+        .animated-icon { display: inline-block; animation: iconFloat 2s ease-in-out infinite; }
+        @keyframes iconFloat { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-5px); } }
+        .icon-pulse { animation: iconPulse 1.5s ease-in-out infinite; }
+        @keyframes iconPulse { 0%, 100% { transform: scale(1); text-shadow: 0 0 5px currentColor; } 50% { transform: scale(1.1); text-shadow: 0 0 20px currentColor; } }
+        .icon-spin { animation: iconSpin 3s linear infinite; }
+        @keyframes iconSpin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        .icon-glow { animation: iconGlow 2s ease-in-out infinite; }
+        @keyframes iconGlow { 0%, 100% { filter: drop-shadow(0 0 2px #00ffcc); } 50% { filter: drop-shadow(0 0 15px #ff0066); } }
+        .icon-bounce { animation: iconBounce 0.8s ease-in-out infinite; }
+        @keyframes iconBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
+        
+        #particle-canvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -2; pointer-events: none; }
+        .mouse-glow { position: fixed; width: 450px; height: 450px; background: radial-gradient(circle, rgba(0, 255, 204, 0.35) 0%, rgba(255, 0, 102, 0.25) 40%, transparent 70%); border-radius: 50%; pointer-events: none; z-index: -1; transform: translate(-50%, -50%); filter: blur(25px); }
+        .grid-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-image: linear-gradient(rgba(0, 255, 204, 0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 0, 102, 0.12) 1px, transparent 1px); background-size: 65px 65px; z-index: -1; animation: gridMove 20s linear infinite; pointer-events: none; }
+        @keyframes gridMove { 0% { transform: translateY(0) translateX(0); } 100% { transform: translateY(65px) translateX(65px); } }
+        .orb { position: fixed; border-radius: 50%; filter: blur(90px); z-index: -1; animation: floatOrb 18s ease-in-out infinite; pointer-events: none; }
+        @keyframes floatOrb { 0%, 100% { transform: translate(0, 0) scale(1); opacity: 0.25; } 33% { transform: translate(80px, -60px) scale(1.2); opacity: 0.4; } 66% { transform: translate(-60px, 80px) scale(0.9); opacity: 0.2; } }
+        .scan-line { position: fixed; top: 0; left: 0; width: 100%; height: 3px; background: linear-gradient(90deg, transparent, #00ffcc, #ff0066, #00ffcc, transparent); animation: scanMove 5s linear infinite; z-index: -1; opacity: 0.5; pointer-events: none; }
+        @keyframes scanMove { 0% { top: -10px; } 100% { top: 100%; } }
+        
+        .theme-toggle { position: fixed; top: 20px; right: 20px; z-index: 999; background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(12px); border: 1px solid #00ffcc; border-radius: 50px; padding: 8px 20px; cursor: pointer; display: flex; align-items: center; gap: 10px; }
+        .share-btn { position: fixed; bottom: 25px; right: 25px; background: linear-gradient(135deg, #ff0066, #00ffcc); width: 55px; height: 55px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; z-index: 999; box-shadow: 0 0 20px rgba(255, 0, 102, 0.5); animation: sharePulse 2s ease-in-out infinite; }
+        @keyframes sharePulse { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); box-shadow: 0 0 35px rgba(0, 255, 204, 0.7); } }
+        
+        .neon-btn-primary { background: linear-gradient(95deg, #ff0066, #00ffcc); border: none; color: black; animation: btnGlow 2s ease-in-out infinite; padding: 12px 28px; border-radius: 60px; font-weight: bold; cursor: pointer; }
+        @keyframes btnGlow { 0%, 100% { box-shadow: 0 0 5px #ff0066; } 50% { box-shadow: 0 0 25px #00ffcc; } }
+        .neon-btn-secondary { background: transparent; border: 2px solid #00ffcc; color: #00ffcc; padding: 12px 28px; border-radius: 60px; font-weight: bold; cursor: pointer; }
+        
+        .price-card { background: rgba(10, 15, 25, 0.85); backdrop-filter: blur(12px); border: 2px solid rgba(255, 0, 102, 0.5); transition: all 0.4s ease; cursor: pointer; border-radius: 28px; }
+        .price-card:hover { transform: translateY(-10px); border-color: #00ffcc; box-shadow: 0 20px 35px -12px rgba(0, 255, 204, 0.6); }
+        .price-card.selected { border: 3px solid #00ffcc; box-shadow: 0 0 40px #00ffcc; background: linear-gradient(145deg, rgba(0, 255, 204, 0.2), rgba(255, 0, 102, 0.15)); }
+        .floating-badge { position: absolute; top: -12px; right: -8px; background: linear-gradient(135deg, #ff0066, #ff6600); color: white; font-weight: bold; padding: 4px 14px; border-radius: 40px; font-size: 0.7rem; transform: rotate(8deg); animation: badgeWobble 1.5s ease-in-out infinite; }
+        @keyframes badgeWobble { 0%, 100% { transform: rotate(8deg); } 50% { transform: rotate(12deg) translateY(-3px); } }
+        
+        .progress-container { background: rgba(255, 255, 255, 0.2); border-radius: 50px; height: 8px; overflow: hidden; }
+        .progress-bar { height: 100%; background: linear-gradient(45deg, #ff0066, #00ffcc); border-radius: 50px; transition: width 0.5s; }
+        .reward-badge { background: linear-gradient(45deg, #ff0066, #00ffcc); color: black; padding: 2px 10px; border-radius: 50px; font-size: 0.75rem; font-weight: bold; display: inline-block; }
+        .key-details-card, .payment-qr-container { background: rgba(10, 15, 25, 0.85); backdrop-filter: blur(12px); border-radius: 28px; padding: 2rem; }
+        .key-details-card { border: 2px solid rgba(255, 0, 102, 0.5); }
+        .payment-qr-container { border: 2px solid rgba(0, 255, 204, 0.5); }
+        .upi-glow { background: rgba(0, 0, 0, 0.6); border-radius: 60px; padding: 12px 18px; font-family: monospace; border: 1px dashed #00ffcc; cursor: pointer; animation: upiPulse 1.5s ease-in-out infinite; }
+        @keyframes upiPulse { 0%, 100% { border-color: #00ffcc; } 50% { border-color: #ff0066; box-shadow: 0 0 10px #ff0066; } }
+        .live-ticker { background: rgba(255, 0, 102, 0.2); border-radius: 60px; padding: 6px 18px; display: inline-flex; align-items: center; gap: 10px; animation: liveFlicker 1s ease-in-out infinite; }
+        @keyframes liveFlicker { 0%, 100% { background: rgba(255, 0, 102, 0.2); } 50% { background: rgba(0, 255, 204, 0.2); } }
+        .pulse-dot { width: 10px; height: 10px; background: #ff0066; border-radius: 50%; animation: pulseRed 1.2s infinite; }
+        @keyframes pulseRed { 0% { transform: scale(0.8); opacity: 0.5; } 100% { transform: scale(1.4); opacity: 0; } }
+        .quick-action { background: rgba(0, 255, 204, 0.1); border-radius: 50px; padding: 10px 15px; text-align: center; cursor: pointer; border: 1px solid rgba(0, 255, 204, 0.3); transition: all 0.2s; }
+        .quick-action:hover { background: rgba(0, 255, 204, 0.3); transform: translateY(-2px); }
+        .delivery-step { transition: all 0.3s; animation: stepPulse 2s ease-in-out infinite; }
+        @keyframes stepPulse { 0%, 100% { opacity: 0.7; } 50% { opacity: 1; transform: translateY(-2px); } }
+        .custom-toast { position: fixed; bottom: 100px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, #1f2937, #111827); border-left: 5px solid #00ffcc; padding: 12px 24px; border-radius: 50px; z-index: 10001; color: white; font-weight: bold; animation: slideUp 0.3s ease; }
+        .flash-counter { background: linear-gradient(45deg, #ff0066, #ff6600); -webkit-background-clip: text; background-clip: text; color: transparent; font-weight: 900; font-size: 2rem; }
+        .section-hidden { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
+        .section-show { opacity: 1; transform: translateY(0); }
+        @media (max-width: 768px) { .custom-toast { white-space: normal; width: 90%; text-align: center; font-size: 14px; } }
+    </style>
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+    <div class="grid-overlay"></div>
+    <div class="mouse-glow" id="mouseGlow"></div>
+    <div class="scan-line"></div>
+    <div class="orb" style="top: 5%; left: 10%; width: 450px; height: 450px; background: rgba(255, 0, 102, 0.2);"></div>
+    <div class="orb" style="bottom: 10%; right: 5%; width: 550px; height: 550px; background: rgba(0, 255, 204, 0.18);"></div>
+    
+    <div class="theme-toggle" onclick="toggleTheme()"><i class="fas fa-sun" id="theme-icon"></i><span id="theme-text">Light</span></div>
+    <div class="share-btn" onclick="shareWebsite()"><i class="fas fa-share-alt text-2xl text-black"></i></div>
+    
+    <!-- MODAL -->
+    <div id="downloadModal" class="download-modal">
+        <div class="close-modal" onclick="closeModal()">&times;</div>
+        <div class="modal-content">
+            <i class="fas fa-dragon text-5xl text-[#00ffcc] icon-pulse"></i>
+            <h2 class="text-2xl font-bold mt-2">⚡ CHOOSE YOUR KEY ⚡</h2>
+            <p class="text-gray-300 text-sm mb-3">Select a plan before downloading loader</p>
+            <div id="modalPlanList" class="my-3"></div>
+            <div class="loader-spinner" id="modalSpinner" style="display: none;"></div>
+            <div id="modalSelectedInfo" class="text-sm text-cyan-300 mb-2"></div>
+            <button id="proceedToPayBtn" class="download-btn-modal" disabled><i class="fas fa-credit-card mr-2"></i> PROCEED TO PAYMENT</button>
+            <button id="downloadLoaderOnly" class="download-btn-modal mt-2" style="background: transparent; border: 1px solid #00ffcc; color: #00ffcc;"><i class="fas fa-download mr-2"></i> DIRECT DOWNLOAD</button>
+        </div>
+    </div>
+    
+    <div class="relative z-10">
+        <!-- HERO -->
+        <section class="min-h-screen flex items-center justify-center relative px-4">
+            <div class="text-center z-10">
+                <div class="inline-block mb-6">
+                    <span class="px-8 py-3 bg-gradient-to-r from-[#ff0066] to-[#00ffcc] text-black font-black rounded-full tracking-widest text-sm flex items-center gap-2">
+                        <i class="fas fa-crown animated-icon"></i> NEON CYBERPUNK EDITION <i class="fas fa-bolt icon-pulse"></i>
+                    </span>
+                </div>
+                <div class="glitch-wrapper">
+                    <h1 class="glitch-text hero-glow" data-text="KILLER VIP 3.0">KILLER VIP 3.0</h1>
+                </div>
+                <div class="text-xl md:text-2xl text-cyan-300 font-bold mb-8 h-16 mt-4" id="tagline"></div>
+                <div class="flex flex-wrap gap-5 justify-center">
+                    <button id="buyNowGlowBtn" class="neon-btn-primary px-10 py-4 rounded-full text-xl font-bold flex items-center gap-2"><i class="fas fa-bolt icon-pulse"></i> BUY KEYS NOW</button>
+                    <button onclick="scrollToPayment()" class="neon-btn-secondary px-8 py-4 rounded-full text-xl font-bold flex items-center gap-2"><i class="fab fa-telegram icon-bounce"></i> VIP ACCESS</button>
+                </div>
+                <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce"><i class="fas fa-chevron-down text-2xl text-[#00ffcc]"></i></div>
+            </div>
+        </section>
+        
+        <!-- STATS -->
+        <section class="py-16 px-4"><div class="max-w-6xl mx-auto"><div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center"><div class="section-hidden"><div class="text-5xl font-black text-[#ff0066] counter" data-target="18450">0</div><div class="text-gray-400 mt-2"><i class="fas fa-users icon-glow mr-1"></i> ACTIVE USERS</div></div><div class="section-hidden"><div class="text-5xl font-black text-[#00ffcc] counter" data-target="7520">0</div><div class="text-gray-400 mt-2"><i class="fas fa-crown icon-pulse mr-1"></i> VIP MEMBERS</div></div><div class="section-hidden"><div class="text-5xl font-black text-[#ff0066] counter" data-target="12890">0</div><div class="text-gray-400 mt-2"><i class="fas fa-skull icon-glow mr-1"></i> DAILY KILLS</div></div><div class="section-hidden"><div class="text-5xl font-black text-[#00ffcc] counter" data-target="99">0</div><div class="text-gray-400 mt-2"><i class="fas fa-star icon-spin mr-1"></i> SATISFACTION</div></div></div></div></section>
+        
+        <!-- PLANS -->
+        <section id="plans-section" class="py-20 px-4"><div class="max-w-7xl mx-auto"><h2 class="text-4xl md:text-5xl text-center gaming-font mb-12 section-hidden">🔥 <span class="bg-gradient-to-r from-[#ff0066] to-[#00ffcc] bg-clip-text text-transparent">SELECT YOUR WEAPON</span> 🔥</h2><div class="grid grid-cols-2 md:grid-cols-4 gap-5" id="plansGrid"></div></div></section>
+        
+        <!-- LOADER -->
+        <section class="py-10 px-4"><div class="max-w-4xl mx-auto"><div class="bg-black/40 backdrop-blur-xl rounded-3xl p-8 border border-[#00ffcc] section-hidden"><h2 class="text-3xl text-center mb-6"><i class="fas fa-gamepad text-[#00ffcc] icon-spin"></i> SELECT YOUR LOADER</h2><div class="flex flex-wrap justify-center gap-5"><div class="loader-option active px-8 py-3 bg-[#1a1f2e] rounded-full flex items-center gap-3 text-lg cursor-pointer border border-[#00ffcc]"><i class="fas fa-crosshairs text-[#00ffcc] icon-pulse"></i><span>BGMi LOADER</span></div><div class="loader-option px-8 py-3 bg-[#1a1f2e] rounded-full flex items-center gap-3 text-lg cursor-pointer"><i class="fas fa-bolt text-[#ff0066] icon-bounce"></i><span>BESTCHEAT LOADER</span></div></div><div class="text-center mt-4 text-sm text-gray-400"><i class="fas fa-shield-alt text-[#00ffcc] icon-glow"></i> 100% Undetected | Auto Updates</div></div></div></section>
+        
+        <!-- PAYMENT SECTION - FULLY RESTORED -->
+        <section id="payment-section" class="py-20 px-4">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-8">
+                    <h2 class="text-4xl md:text-5xl gaming-font section-hidden">💀 <span class="bg-gradient-to-r from-[#ff0066] to-[#00ffcc] bg-clip-text text-transparent">CHECKOUT ARENA</span> 💀</h2>
+                    <div id="selected-plan-display" class="inline-block mt-4 bg-[#00ffcc20] rounded-full px-6 py-2 text-lg section-hidden">
+                        Selected: <span id="selected-plan-name" class="font-bold text-[#00ffcc]">5 Hours</span> | ₹<span id="selected-plan-price">50</span>
+                        <span id="selected-reward" class="reward-badge ml-2">+12 pts</span>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Left: Key Details -->
+                    <div class="key-details-card section-hidden">
+                        <h3 class="text-2xl font-bold text-center mb-6"><i class="fas fa-key text-[#00ffcc] icon-pulse"></i> YOUR KILLER PACK</h3>
+                        <div class="space-y-4">
+                            <div class="flex justify-between border-b border-[#ff0066]/30 pb-3"><span class="text-gray-400"><i class="fas fa-clock mr-2"></i>Duration:</span><span class="font-bold text-[#ff0066]" id="detail-duration">5 Hours</span></div>
+                            <div class="flex justify-between border-b border-[#ff0066]/30 pb-3"><span class="text-gray-400"><i class="fas fa-cog mr-2"></i>Features:</span><span id="detail-features" class="text-[#00ffcc]">Aimbot + ESP + Wallhack</span></div>
+                            <div class="flex justify-between border-b border-[#ff0066]/30 pb-3"><span class="text-gray-400"><i class="fas fa-shield-alt mr-2 icon-glow"></i>Anti-Ban:</span><span>✅ Military Grade Security</span></div>
+                            <div class="flex justify-between border-b border-[#ff0066]/30 pb-3"><span class="text-gray-400"><i class="fas fa-headset mr-2"></i>Support:</span><span>🔥 24/7 Priority Support</span></div>
+                            <div class="flex justify-between"><span class="text-gray-400"><i class="fas fa-gem mr-2 icon-spin"></i>Reward Points:</span><span id="detail-reward" class="text-yellow-400 font-bold">+12</span></div>
+                        </div>
+                        
+                        <div class="mt-6 grid grid-cols-3 gap-2 text-center">
+                            <div class="delivery-step"><i class="fas fa-qrcode text-2xl text-[#00ffcc]"></i><div class="text-xs mt-1">Step 1: Pay</div></div>
+                            <div class="delivery-step"><i class="fas fa-camera text-2xl text-[#ff0066]"></i><div class="text-xs mt-1">Step 2: Screenshot</div></div>
+                            <div class="delivery-step"><i class="fas fa-key text-2xl text-yellow-400"></i><div class="text-xs mt-1">Step 3: Get Key</div></div>
+                        </div>
+                        
+                        <div class="live-ticker mt-6 mx-auto w-fit"><span class="pulse-dot"></span><span><i class="fas fa-users mr-1"></i><span id="live-count">187</span> players buying now</span></div>
+                        
+                        <div class="mt-6 text-center"><div class="text-sm text-gray-400"><i class="fas fa-hourglass-half mr-1"></i>FLASH SALE ENDS IN</div><div class="flash-counter text-4xl font-black" id="countdown">05:00</div></div>
+                        
+                        <div class="mt-3"><div class="flex justify-between text-sm"><span>🔥 <i class="fas fa-fire"></i> <span id="sold-count">143</span>/250 sold</span><span>⚡ Limited slots left</span></div><div class="progress-container mt-1"><div id="flash-sale-progress" class="progress-bar" style="width: 57%"></div></div></div>
+                        
+                        <div class="mt-5 pt-3 border-t border-[#ff0066]/30"><p class="text-xs text-center text-gray-400"><i class="fas fa-check-circle text-green-500 mr-1"></i> Includes: Aimbot | ESP | Wallhack | No Recoil | Anti-Ban</p></div>
+                    </div>
+                    
+                    <!-- Right: Payment Section -->
+                    <div class="payment-qr-container section-hidden text-center">
+                        <h3 class="text-2xl font-bold mb-4"><i class="fas fa-bolt text-[#ff0066] icon-pulse"></i> PAY VIA UPI <i class="fas fa-bolt text-[#00ffcc] icon-pulse"></i></h3>
+                        <div id="qrcode" class="flex justify-center my-4"></div>
+                        <div class="text-3xl font-black text-[#00ffcc] mb-3">₹<span id="payment-amount">50</span></div>
+                        
+                        <div class="upi-glow flex justify-between items-center px-4 py-3 mb-5 rounded-full" onclick="copyUPI()">
+                            <span><i class="fas fa-credit-card mr-2"></i> KSURAJ138@YBL</span>
+                            <i class="fas fa-copy text-[#00ffcc] text-xl"></i>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-3 mb-5">
+                            <div class="quick-action" onclick="copyUPI()"><i class="fas fa-copy icon-pulse"></i> Copy UPI</div>
+                            <div class="quick-action" onclick="window.open('https://wa.me/917015742792?text=I%20paid%20for%20KILLER%20VIP','_blank')"><i class="fab fa-whatsapp icon-bounce"></i> WhatsApp</div>
+                            <div class="quick-action" onclick="window.open('https://t.me/BESTCHEAT_VIP','_blank')"><i class="fab fa-telegram icon-glow"></i> Telegram</div>
+                            <div class="quick-action" onclick="window.location.href='tel:+919896207723'"><i class="fas fa-phone icon-spin"></i> Call Now</div>
+                        </div>
+                        
+                        <div class="bg-gradient-to-r from-green-500/20 to-blue-500/20 rounded-xl p-4 border border-green-500 mb-4">
+                            <p class="text-sm font-bold"><i class="fas fa-check-circle text-green-400"></i> <span class="text-green-400">HOW TO GET KEY:</span></p>
+                            <p class="text-xs mt-1">1️⃣ Scan QR or Copy UPI ID<br>2️⃣ Make payment of <span class="text-[#00ffcc] font-bold">₹<span id="payment-amount-instr">50</span></span><br>3️⃣ Take screenshot & send to WhatsApp/Telegram<br>4️⃣ Get KEY instantly (within 2 minutes)</p>
+                        </div>
+                        
+                        <div class="bg-red-500/20 rounded-xl p-4 border border-red-500">
+                            <p class="text-sm"><i class="fas fa-exclamation-triangle text-yellow-400 icon-pulse"></i> <strong>⚠️ IMPORTANT:</strong> After payment, send screenshot to Admin on WhatsApp or Telegram for instant KEY delivery!</p>
+                        </div>
+                        
+                        <div class="mt-3 text-xs text-gray-400"><i class="fas fa-clock"></i> QR Code refreshes every 5 mins | Payment pending: <span id="payment-timer">10:00</span></div>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-4 gap-3 mt-10 text-center section-hidden">
+                    <div><i class="fas fa-shield-alt text-2xl text-[#00ffcc] icon-pulse"></i><div class="text-xs">256-bit Secure</div></div>
+                    <div><i class="fas fa-bolt text-2xl text-[#ff0066] icon-bounce"></i><div class="text-xs">Instant Delivery</div></div>
+                    <div><i class="fas fa-headset text-2xl text-[#00ffcc] icon-glow"></i><div class="text-xs">24/7 Support</div></div>
+                    <div><i class="fas fa-undo-alt text-2xl text-[#ff0066] icon-spin"></i><div class="text-xs">Replacement Policy</div></div>
+                </div>
+                
+                <div class="mt-8 p-4 bg-black/30 rounded-2xl text-center section-hidden"><p class="text-sm"><i class="fas fa-chart-line text-[#00ffcc]"></i> <strong>PRO TIP:</strong> 15 Days & 30 Days plans are most popular! Get extra reward points + priority support</p></div>
+            </div>
+        </section>
+        
+        <!-- TESTIMONIALS -->
+        <section class="py-16 px-4"><div class="max-w-6xl mx-auto"><h2 class="text-4xl text-center mb-12 section-hidden">🎤 <span class="bg-gradient-to-r from-[#ff0066] to-[#00ffcc] bg-clip-text text-transparent">WARRIOR REVIEWS</span></h2><div class="swiper mySwiper section-hidden"><div class="swiper-wrapper"><div class="swiper-slide"><div class="bg-black/60 p-6 rounded-2xl text-center"><i class="fas fa-user-circle text-5xl text-[#00ffcc] icon-pulse"></i><p class="mt-3">"Best cheat provider! 60 days no ban."</p><b>- Rohan S.</b><div class="text-yellow-400">★★★★★</div></div></div><div class="swiper-slide"><div class="bg-black/60 p-6 rounded-2xl text-center"><i class="fas fa-user-circle text-5xl text-[#ff0066] icon-bounce"></i><p class="mt-3">"Got key within 2 mins after payment."</p><b>- Anjali K.</b><div class="text-yellow-400">★★★★★</div></div></div><div class="swiper-slide"><div class="bg-black/60 p-6 rounded-2xl text-center"><i class="fas fa-user-circle text-5xl text-[#00ffcc] icon-glow"></i><p class="mt-3">"Undetectable aimbot. Highly recommend!"</p><b>- Vikram Singh</b><div class="text-yellow-400">★★★★★</div></div></div></div><div class="swiper-pagination"></div></div></div></section>
+        
+        <footer class="py-8 border-t border-[#ff0066]/30 text-center text-gray-500 text-sm"><p><i class="fas fa-skull text-[#ff0066] animated-icon"></i> © 2026 KILLER VIP — All rights reserved <i class="fas fa-bolt text-[#00ffcc] icon-pulse"></i></p></footer>
+    </div>
+
+    <script>
+        const plansData = [
+            { price: 50, plan: "5 Hours", reward: 12, popular: true, icon: "fa-hourglass-half", color: "text-[#00ffcc]" },
+            { price: 80, plan: "1 Day", reward: 18, icon: "fa-sun", color: "text-yellow-400" },
+            { price: 220, plan: "3 Days", reward: 30, hot: true, icon: "fa-fire", color: "text-orange-500" },
+            { price: 450, plan: "7 Days", reward: 48, icon: "fa-dragon", color: "text-cyan-400" },
+            { price: 700, plan: "15 Days", reward: 75, best: true, icon: "fa-crown", color: "text-yellow-300" },
+            { price: 999, plan: "30 Days", reward: 125, icon: "fa-skull", color: "text-pink-500" },
+            { price: 1499, plan: "60 Days", reward: 200, icon: "fa-infinity", color: "text-[#00ffcc]" }
+        ];
+        
+        const downloadLink = "https://t.me/c/2597877167/4147";
+        let selectedPrice = 50, selectedPlan = "5 Hours", selectedReward = 12;
+        
+        // Render plans grid
+        const plansGrid = document.getElementById('plansGrid');
+        plansGrid.innerHTML = plansData.map(p => `
+            <div class="price-card rounded-2xl p-5 text-center cursor-pointer relative section-hidden" data-price="${p.price}" data-plan="${p.plan}" data-reward="${p.reward}">
+                ${p.popular ? '<div class="floating-badge"><i class="fas fa-bolt"></i> POPULAR</div>' : (p.hot ? '<div class="floating-badge" style="background:#ff6600;"><i class="fas fa-fire"></i> HOT</div>' : (p.best ? '<div class="floating-badge">⭐ BEST VALUE</div>' : ''))}
+                <i class="fas ${p.icon} text-3xl ${p.color} icon-pulse"></i>
+                <div class="text-xl font-bold mt-2">${p.plan}</div>
+                <div class="text-3xl font-black my-2">₹${p.price}</div>
+                <div class="progress-container"><div class="progress-bar" style="width: ${Math.floor(Math.random() * 30 + 60)}%"></div></div>
+                <div class="reward-badge mt-2">+${p.reward} pts</div>
+            </div>
+        `).join('');
+        plansGrid.innerHTML += `<div class="price-card rounded-2xl p-5 text-center cursor-pointer relative section-hidden" data-price="custom" data-plan="Custom" data-reward="0"><i class="fas fa-gem text-3xl text-purple-400 icon-glow"></i><div class="text-xl font-bold mt-2">CUSTOM</div><div class="text-lg font-black my-2 text-[#00ffcc]">Contact Admin</div><div class="reward-badge mt-2">🤝 Special</div></div>`;
+        
+        // Modal plans
+        function renderModalPlans() {
+            const modalPlanList = document.getElementById('modalPlanList');
+            modalPlanList.innerHTML = plansData.map(p => `
+                <div class="modal-plan-btn" data-price="${p.price}" data-plan="${p.plan}" data-reward="${p.reward}">
+                    <span><strong>${p.plan}</strong> <span class="reward-badge ml-2">+${p.reward} pts</span></span>
+                    <span class="text-xl font-bold">₹${p.price}</span>
+                </div>
+            `).join('');
+            document.querySelectorAll('.modal-plan-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.modal-plan-btn').forEach(b => b.classList.remove('selected-plan-modal'));
+                    btn.classList.add('selected-plan-modal');
+                    window.selectedModalPlan = { price: parseInt(btn.dataset.price), plan: btn.dataset.plan, reward: parseInt(btn.dataset.reward) };
+                    document.getElementById('modalSelectedInfo').innerHTML = `✅ Selected: ${window.selectedModalPlan.plan} | ₹${window.selectedModalPlan.price} | +${window.selectedModalPlan.reward} points`;
+                    document.getElementById('proceedToPayBtn').disabled = false;
+                });
+            });
+        }
+        
+        function openModal() { document.getElementById('downloadModal').style.display = 'flex'; renderModalPlans(); window.selectedModalPlan = null; document.getElementById('proceedToPayBtn').disabled = true; document.getElementById('modalSelectedInfo').innerHTML = ''; }
+        function closeModal() { document.getElementById('downloadModal').style.display = 'none'; }
+        window.closeModal = closeModal;
+        
+        document.getElementById('buyNowGlowBtn').addEventListener('click', (e) => { e.preventDefault(); openModal(); });
+        document.getElementById('proceedToPayBtn').addEventListener('click', () => {
+            if (window.selectedModalPlan) {
+                const card = Array.from(document.querySelectorAll('.price-card')).find(c => parseInt(c.dataset.price) === window.selectedModalPlan.price);
+                if (card) card.click();
+                else { selectedPrice = window.selectedModalPlan.price; selectedPlan = window.selectedModalPlan.plan; selectedReward = window.selectedModalPlan.reward; updatePlanUI(selectedPrice, selectedPlan, selectedReward); }
+                closeModal();
+                setTimeout(() => document.getElementById('payment-section').scrollIntoView({ behavior: 'smooth' }), 300);
+                showToast(`✅ ${window.selectedModalPlan.plan} plan selected!`);
+            }
+        });
+        document.getElementById('downloadLoaderOnly').addEventListener('click', () => { closeModal(); window.open(downloadLink, '_blank'); showToast("📲 Download started!"); });
+        
+        // Price card click handler
+        document.querySelectorAll('.price-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const price = this.getAttribute('data-price');
+                const plan = this.getAttribute('data-plan');
+                const reward = this.getAttribute('data-reward') || 0;
+                if (price === 'custom') { showToast('📞 Contact admin on Telegram!'); window.open('https://t.me/BESTCHEAT_VIP', '_blank'); return; }
+                document.querySelectorAll('.price-card').forEach(c => c.classList.remove('selected'));
+                this.classList.add('selected');
+                selectedPrice = parseInt(price);
+                selectedPlan = plan;
+                selectedReward = parseInt(reward);
+                updatePlanUI(selectedPrice, selectedPlan, selectedReward);
+                showToast(`✅ ${plan} plan selected!`);
+                setTimeout(() => document.getElementById('payment-section').scrollIntoView({ behavior: 'smooth' }), 300);
+            });
+        });
+        
+        function updatePlanUI(price, plan, reward) {
+            document.getElementById('selected-plan-name').innerText = plan;
+            document.getElementById('selected-plan-price').innerText = price;
+            document.getElementById('selected-reward').innerHTML = `+${reward} pts`;
+            document.getElementById('payment-amount').innerText = price;
+            document.getElementById('payment-amount-instr').innerText = price;
+            document.getElementById('detail-duration').innerText = plan;
+            document.getElementById('detail-reward').innerText = `+${reward}`;
+            const featuresMap = { '5 Hours': 'Aimbot + ESP + Wallhack', '1 Day': 'Aimbot + ESP + Radar + No Recoil', '3 Days': 'Aimbot + ESP + Magic Bullet + Anti-Ban', '7 Days': 'All Features + Premium Support', '15 Days': 'Ultimate Pack + Priority 24/7', '30 Days': 'VIP Features + Lifetime Updates', '60 Days': 'God Mode + Priority Support' };
+            document.getElementById('detail-features').innerHTML = featuresMap[plan] || 'All Premium Features';
+            generateQRCode(price);
+        }
+        
+        function generateQRCode(amount) {
+            const upiData = `upi://pay?pa=KSURAJ138@YBL&pn=SURAJ%20KUMAR&am=${amount}&cu=INR`;
+            const qr = qrcode(0, 'H');
+            qr.addData(upiData);
+            qr.make();
+            document.getElementById('qrcode').innerHTML = qr.createImgTag(6);
+            const img = document.querySelector('#qrcode img');
+            if (img) { img.style.width = '180px'; img.style.height = '180px'; img.style.borderRadius = '20px'; img.style.padding = '10px'; img.style.backgroundColor = 'white'; }
+        }
+        
+        function copyUPI() { navigator.clipboard.writeText('KSURAJ138@YBL'); showToast('✅ UPI ID Copied!'); }
+        window.copyUPI = copyUPI;
+        function showToast(msg) { let toast = document.createElement('div'); toast.className = 'custom-toast'; toast.innerHTML = msg; document.body.appendChild(toast); setTimeout(() => toast.remove(), 3000); }
+        window.scrollToPayment = () => { if (selectedPrice) document.getElementById('payment-section').scrollIntoView({ behavior: 'smooth' }); else showToast('⚠️ Please select a plan first!'); };
+        
+        // Particles
+        const canvas = document.getElementById('particle-canvas');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+        function resizeCanvas() { canvas.width = window.innerWidth; canvas.height = window.innerHeight; }
+        class Particle { constructor() { this.x = Math.random() * canvas.width; this.y = Math.random() * canvas.height; this.size = Math.random() * 3 + 1; this.speedX = (Math.random() - 0.5) * 0.6; this.speedY = (Math.random() - 0.5) * 0.6; this.color = `hsl(${Math.random() * 60 + 300}, 100%, 60%)`; } update() { this.x += this.speedX; this.y += this.speedY; if (this.x < 0) this.x = canvas.width; if (this.x > canvas.width) this.x = 0; if (this.y < 0) this.y = canvas.height; if (this.y > canvas.height) this.y = 0; } draw() { ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fillStyle = this.color; ctx.shadowBlur = 10; ctx.shadowColor = this.color; ctx.fill(); } }
+        function initParticles() { particles = []; for (let i = 0; i < 150; i++) particles.push(new Particle()); }
+        function animateParticles() { ctx.clearRect(0, 0, canvas.width, canvas.height); particles.forEach(p => { p.update(); p.draw(); }); requestAnimationFrame(animateParticles); }
+        resizeCanvas(); initParticles(); animateParticles(); window.addEventListener('resize', () => { resizeCanvas(); initParticles(); });
+        
+        document.addEventListener('mousemove', (e) => { document.getElementById('mouseGlow').style.transform = `translate(${e.clientX}px, ${e.clientY}px)`; });
+        function toggleTheme() { document.body.classList.toggle('light-mode'); const icon = document.getElementById('theme-icon'); const text = document.getElementById('theme-text'); if (document.body.classList.contains('light-mode')) { icon.className = 'fas fa-moon'; text.textContent = 'Dark'; } else { icon.className = 'fas fa-sun'; text.textContent = 'Light'; } }
+        window.toggleTheme = toggleTheme;
+        function shareWebsite() { if (navigator.share) navigator.share({ title: 'KILLER VIP', url: window.location.href }); else alert('Link: ' + window.location.href); }
+        window.shareWebsite = shareWebsite;
+        
+        document.querySelectorAll('.loader-option').forEach(opt => {
+            opt.addEventListener('click', function() { document.querySelectorAll('.loader-option').forEach(o => { o.classList.remove('active'); o.style.border = 'none'; }); this.classList.add('active'); this.style.border = '1px solid #00ffcc'; showToast(`🎮 Loader: ${this.innerText.trim()}`); });
+        });
+        
+        // Typing animation
+        const taglineElement = document.getElementById('tagline');
+        const taglines = ['🔥 DOMINATE THE BATTLEFIELD', '⚡ UNLOCK VIP FEATURES', '🎯 100% UNDETECTABLE', '👑 JOIN THE ELITE SQUAD'];
+        let taglineIndex = 0, charIndex = 0;
+        function typeTagline() { if (charIndex < taglines[taglineIndex].length) { taglineElement.innerHTML += taglines[taglineIndex].charAt(charIndex); charIndex++; setTimeout(typeTagline, 100); } else { setTimeout(eraseTagline, 2000); } }
+        function eraseTagline() { if (charIndex > 0) { taglineElement.innerHTML = taglines[taglineIndex].substring(0, charIndex - 1); charIndex--; setTimeout(eraseTagline, 50); } else { taglineIndex = (taglineIndex + 1) % taglines.length; setTimeout(typeTagline, 500); } }
+        setTimeout(typeTagline, 1000);
+        
+        // Counters
+        document.querySelectorAll('.counter').forEach(counter => { const updateCount = () => { const target = parseInt(counter.dataset.target); const count = parseInt(counter.innerText); if (count < target) { counter.innerText = Math.min(count + Math.ceil(target / 80), target); setTimeout(updateCount, 30); } else counter.innerText = target + '+'; }; updateCount(); });
+        
+        // Scroll reveal
+        const observer = new IntersectionObserver((entries) => { entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('section-show'); }); }, { threshold: 0.1 });
+        document.querySelectorAll('.section-hidden').forEach(s => observer.observe(s));
+        setTimeout(() => document.querySelectorAll('.section-hidden').forEach(s => s.classList.add('section-show')), 200);
+        
+        // Timers
+        let timeLeft = 300; setInterval(() => { if (timeLeft > 0) { timeLeft--; let min = Math.floor(timeLeft / 60), sec = timeLeft % 60; document.getElementById('countdown').innerHTML = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`; } else timeLeft = 300; }, 1000);
+        let liveCount = 187, soldCount = 143; setInterval(() => { liveCount += Math.floor(Math.random() * 3); document.getElementById('live-count').innerText = liveCount; }, 5000);
+        setInterval(() => { if (soldCount < 250) { soldCount += Math.floor(Math.random() * 2); document.getElementById('sold-count').innerText = soldCount; document.getElementById('flash-sale-progress').style.width = (soldCount / 250) * 100 + '%'; } }, 8000);
+        
+        new Swiper('.mySwiper', { slidesPerView: 1, spaceBetween: 20, loop: true, autoplay: { delay: 3000 }, pagination: { el: '.swiper-pagination', clickable: true }, breakpoints: { 640: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
+        
+        generateQRCode(50); updatePlanUI(50, '5 Hours', 12);
+        let paymentTime = 600; setInterval(() => { if (paymentTime > 0) { paymentTime--; let min = Math.floor(paymentTime / 60), sec = paymentTime % 60; document.getElementById('payment-timer').innerHTML = `${min.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`; } else paymentTime = 600; }, 1000);
+        
+        document.querySelector('.price-card')?.classList.add('selected');
+    </script>
+</body>
+</html>
